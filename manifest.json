@@ -1,13 +1,12 @@
 {
     "name": "YouTube Quick Search",
-    "version": "0.0.1",
-    "description": "Searches for the selected text in the YouTube",
+    "version": "1.0.0",
+    "description": "Searches for the selected text in YouTube",
     "manifest_version": 3,
     "author": "Lewis Bell",
-    "minimum_chrome_version": "38",
+    "minimum_chrome_version": "88",
     "permissions": [
-        "contextMenus",
-        "tabs"
+        "contextMenus"
     ],
     "icons": {
         "16": "assets/icon.png",

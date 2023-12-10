@@ -33,4 +33,11 @@ const handleSelectText = (word) => {
 }
 
 let searchBtn = document.getElementById("search-btn");
-searchBtn.addEventListener("click", handleClickSearchBtn)
+searchBtn.addEventListener("click", handleClickSearchBtn);
+
+let inputBox = document.getElementById("search-youtube");
+inputBox.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      searchBtn.click();  
+    }
+});

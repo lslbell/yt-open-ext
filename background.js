@@ -12,12 +12,14 @@ const searchYoutube = (searchQuery) => {
     }
 };
 
-chrome.contextMenus.create({
-    id: "youtube-quicksearch-menu",
-    title: "Youtube Quicksearch",
-    contexts: ["selection"],
-})
+chrome.contextMenus.removeAll(function () {
+    chrome.contextMenus.create({
+        id: "youtube-quicksearch-menu",
+        title: "Youtube Quicksearch",
+        contexts: ["selection"],
+    })
+});
 
-chrome.contextMenus.onClicked.addListener((info, tab) => {
+chrome.contextMenus.onClicked.addListener((info) => {
     searchYoutube(info.selectionText)
 });
